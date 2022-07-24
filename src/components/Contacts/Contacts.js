@@ -4,6 +4,10 @@ import {
     useDeleteContactMutation 
 } from "../../redux/contactSlice";
 import { ContactList } from "./contactList";
+import { PhoneBookTitle } from '../ContactsTitle/PhoneBookTitle';
+import { PhoneBookForm } from '../PhoneBookForm/PhoneBookForm';
+import { ContactsTitle } from '../ContactsTitle/ContactsTitle';
+import { Filter } from '../Filter/Filter';
 import { Spinner } from "../Spinner/spinner";
 
 export const Contacts = () => {
@@ -27,6 +31,10 @@ export const Contacts = () => {
 
     return(
         <div>
+            <PhoneBookTitle title="Phone book"/>
+            <PhoneBookForm />
+            <ContactsTitle title="Contacts"/>
+            <Filter />
             { isFetcing && <Spinner />}
             { contacts && 
             <ContactList 

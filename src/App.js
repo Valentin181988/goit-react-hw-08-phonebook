@@ -1,22 +1,28 @@
 import './App.css';
-
+import {
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
-import { PhoneBookTitle } from './components/ContactsTitle/PhoneBookTitle';
-import { ContactsTitle } from './components/ContactsTitle/ContactsTitle';
-import { Contacts } from './components/Contacts/Contacts';
-import { PhoneBookForm } from './components/PhoneBookForm/PhoneBookForm';
-import { Filter } from './components/Filter/Filter';
+import { Layout } from './components/Layout/Layout';
+import { RegistrationPage } from './pages/registrationPage';
+import { LoginPage } from './pages/loginPage';
+import { ContactsPage } from './pages/contactsPage';
 
 
 function App() { 
 
   return (
     <>
-      <PhoneBookTitle title="Phone book"/>
-      <PhoneBookForm />
-      <ContactsTitle title="Contacts"/>
-      <Filter />
-      <Contacts />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="register" element={<RegistrationPage />}/>
+          <Route path="login" element={<LoginPage />}/>
+          <Route path="contacts" element={<ContactsPage />}/>
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Route>
+      </Routes>
       <Toaster />
     </>
   );
