@@ -1,4 +1,5 @@
 import { Link, Header } from "./appBar.styled";
+import { UserMenu } from "../UserMenu/UserMenu";
 
 export const AppBar = () => {
     return (
@@ -8,6 +9,7 @@ export const AppBar = () => {
                  <Link to="/login">Log in</Link>
                  <Link to="/contacts">Contacts</Link>
             </nav> 
+            <UserMenu />
         </Header>
     );
 }

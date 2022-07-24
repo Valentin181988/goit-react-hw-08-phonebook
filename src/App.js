@@ -26,6 +26,6 @@ function App() {
       <Toaster />
     </>
   );
-}
+};
 
 export default App;
