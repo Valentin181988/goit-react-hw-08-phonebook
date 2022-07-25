@@ -1,14 +1,4 @@
-import { Registration } from '../components/RegistrationForm/registrationForm';
-
-export const RegistrationPage = () => {
-    return (
-        <div>
-            < Registration />
-        </div>
-    );
-};
-
-/* import { useState } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/authOperations';
 
@@ -23,7 +13,7 @@ const styles = {
   },
 };
 
-export const RegistrationPage = () => {
+export const Registration = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -84,5 +74,4 @@ export const RegistrationPage = () => {
       </form>
     </div>
   );
-} */
-
+}
